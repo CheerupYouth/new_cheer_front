@@ -99,7 +99,8 @@ const LoginScreen = ({navigation}) => {
 
         {/* 소셜 로그인 */}
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <TouchableOpacity onPress={handleKakaoLogin}>
+          <TouchableOpacity onPress={()=>{console.log('카카오 로그인')}}>
+          {/* <TouchableOpacity onPress={handleKakaoLogin}> */}
             <Image
               source={require('../../assets/images/kakao_login.png')}
               resizeMode="contain"

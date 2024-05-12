@@ -17,6 +17,9 @@ const LoginScreen = ({navigation}) => {
   const [userId, setUserid] = useState('');
   const [password, setPassword] = useState('');
   const {userDataP, setUserDataP} = useContext(UserContext);
+  const handlsignup = () => {
+    navigation.navigate('SignUp');
+  }
   
   const handleKakaoLogin = async () => { // 함수 선언 시 async 키워드 추가
     try {
@@ -93,7 +96,10 @@ const LoginScreen = ({navigation}) => {
             password={password}
             setPassword={setPassword}
           />
-          <Id_Pw_Sign />
+          <Id_Pw_Sign 
+            text="아이디찾기"
+            SignUp={() => handlsignup()} // onSignUp으로 변경
+          />
         </S.InputContainer>
         <Division />
 

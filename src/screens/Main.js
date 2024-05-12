@@ -77,11 +77,11 @@ const Main = ({navigation}) => {
 
       <S.Row>
         <S.TextBox>
-          {userDataP ? userDataP.id : '묘사'} 님을 위한
+        {userDataP ? userDataP.id : "묘사"} 님을 위한
           {'\n'}맞춤 정책을 찾았어요
         </S.TextBox>
         <TouchableOpacity onPress={ButtonBox}>
-          <S.InnerText>정책 더보기⮕ </S.InnerText>
+          <S.InnerText onPress={() => navigation.navigate("policy_main")}>정책 더보기 ⮕</S.InnerText>
         </TouchableOpacity>
       </S.Row>
 

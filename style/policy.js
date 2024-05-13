@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView } from 'react-native'; // ScrollView를 react-native로부터 정확히 임포트
 import styled from 'styled-components/native';
 
+
 export const Container = styled.View`
   display: flex;
   flex-direction: column;
@@ -67,5 +68,28 @@ export const contentBoxTitle = styled.Text`
 
 export const contentBoxContent = styled.Text`
   padding: 2px 5px;
-  flex: 1;            
 `;
+
+export const contentSideBox = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding-bottom: 3px;
+`;
+
+export const contentChecked= styled.Text`
+  padding-top: 3px;
+  color: blue;
+`;
+
+export const policyModalStyle = styled.View`
+  padding: 20px;
+  margin: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px; 
+  width: 80%; 
+`

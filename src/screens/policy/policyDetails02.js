@@ -77,7 +77,7 @@ const policyDetail = ({route, navigation}) => {
 
                 return (
                 <P.contentBoxContent>
-                  <Icon name="checkcircle" size={18} color="blue" style={{ marginRight: 10 }}/>
+
                   {policy.supported[key]}
                 </P.contentBoxContent>
               )})
@@ -94,10 +94,11 @@ const policyDetail = ({route, navigation}) => {
                 // if (!policy.excluded[key]) return null;
 
                 return (
-                <P.contentBoxContent>
-                  <Icon name="checkcircle" size={18} color="blue" />
-                  {policy.excluded[key]}
-                </P.contentBoxContent>
+                  <>
+                  <P.contentBoxContent>
+                    {policy.excluded[key]}
+                  </P.contentBoxContent>
+                  </>
               )})
             }
           </P.contentBox>

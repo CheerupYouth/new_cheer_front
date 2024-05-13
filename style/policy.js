@@ -65,10 +65,7 @@ export const contentBoxTitle = styled.Text`
   font-weight: bold;
 `;
 
-export const contentBoxContent = styled.View`
+export const contentBoxContent = styled.Text`
   padding: 2px 5px;
   flex: 1;            
-  display: flex;
-  justify-content: center; 
-  align-items: center;  
 `;

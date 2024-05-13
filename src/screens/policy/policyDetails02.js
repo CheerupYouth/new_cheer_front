@@ -50,20 +50,17 @@ const policyDetail = ({route, navigation}) => {
 
       {policy.img && (
         <>
-          {policy.img && (
+        <View>
           <Image
             source={{ uri: policy.img }}
-            style={{width:'100%'}}
-            onError={(e) => console.log('Image load error:', e.nativeEvent.error)}
+            style={{ width: 200, height: 200, resizeMode: 'contain' }}
+            onError={() => console.log('Failed to load image')}
           />
-        )}
+        </View>
         </>
       )}
 
-      <ScrollView
-       showsVerticalScrollIndicator={false} // 세로 스크롤바 숨기기
-       showsHorizontalScrollIndicator={false} // 가로 스크롤바 숨기기
->
+      <ScrollView>
         {policy.sub_title && <P.contentBox>
           <P.contentBoxTitle>사업목적</P.contentBoxTitle>
           <P.contentBoxContent>{policy.sub_title}</P.contentBoxContent>
@@ -76,7 +73,7 @@ const policyDetail = ({route, navigation}) => {
             {Object.keys(policy.supported)
               .filter(key => key.startsWith('conditions'))
               .map(key => {
-                if (!policy.supported[key]) return null;
+                // if (!policy.supported[key]) return null;
 
                 return (
                 <P.contentBoxContent>
@@ -94,7 +91,7 @@ const policyDetail = ({route, navigation}) => {
             {Object.keys(policy.excluded)
               .filter(key => key.startsWith('conditions'))
               .map(key => {
-                if (!policy.excluded[key]) return null;
+                // if (!policy.excluded[key]) return null;
 
                 return (
                 <P.contentBoxContent>
